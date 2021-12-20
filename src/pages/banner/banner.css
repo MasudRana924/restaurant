@@ -1,0 +1,22 @@
+.banner-image{
+    width:100%;
+    height:450px;
+}
+.banner-section{
+    background-color: black;
+    color:white;
+}
+.banner-btn{
+    background-color: #FE5F41;
+    border:#FE5F41;
+    color:#fff;
+    border-radius: 10px;
+    margin-left: -200px;
+}
+.book-btn{
+    background-color: #FE5F41;
+    border:#FE5F41;
+    color:#fff;
+    border-radius: 10px;
+    
+}

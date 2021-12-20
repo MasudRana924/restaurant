@@ -1,0 +1,138 @@
+[
+    {
+      
+      "title":"burger",
+      "name": "Laid back",
+      "rating":"5",
+      "price":"10",
+      "desc": "Burger restaurants are not for the fancy crowd; it’s where people can go wearing t-shirts and jeans, enjoy good food with family or friends in a laid-back kind of atmosphere",
+      "img": "https://image.freepik.com/free-photo/front-view-burger-stand_141793-15542.jpg"
+    },
+    {
+   
+      "title":"burger",
+      "name": "Signature burger",
+      "rating":"3.5",
+      "price":"5",
+      "desc": " If you thought of an awesome name for your signature burger, use it in the name; otherwise, the burger may be named after the restaurant",
+      "img": "https://image.freepik.com/free-photo/big-sandwich-hamburger-burger-with-beef-red-onion-tomato-fried-bacon_2829-5398.jpg"
+    },
+    {
+   
+      "title":"burger",
+      "name": "Alliterations",
+      "rating":"2.5",
+      "price":"10.6",
+      "desc": "Burger obviously starts with the letter “b” which opens up a whole world of naming opportunities when you consider alliterations. If you’re not familiar with this, an alliteration is a repetition of a sound in consecutive words. For example: Bob’s Burger Bar",
+      "img": "https://image.freepik.com/free-photo/front-view-tasty-meat-burger-with-cheese-salad-dark-background_140725-89597.jpg"
+    },
+    {
+ 
+      "title":"burger",
+      "name": "The Burger Barn",
+      "rating":"5",
+      "price":"7",
+      "desc": "This scrumptious burger sits under a chilli lamb pattie, roasted bell pepper dip, onions, tomatoes and lettuce.",
+      "img": "https://img.freepik.com/free-photo/front-view-meat-burger-with-cheese-salad-tomatoes-dark-floor_140725-89524.jpg?size=338&ext=jpg"
+    },
+    {
+
+      "title":"burger",
+      "name": "Perfect Lamb Satay Burger",
+      "rating":"2",
+      "price":"15",
+      "desc": "Succulent lamb burgers with the crunchiness of cashew nuts and the creaminess of peanut butter smothered with a gorgeous satay sauce.",
+      "img": "https://img.freepik.com/free-photo/beef-cotlet-burger-with-sauce-wooden-board_114579-2600.jpg?size=338&ext=jpg"
+    },
+    {
+
+      "title":"burger",
+      "name": " Lamb and Tomato Stuffed Burger",
+      "rating":"5",
+      "price":"4",
+      "desc": "A perfectly shaped lamb pattie cooked to perfection. The tomatoes arent just a topping but the spotlight of this beautiful dish.",
+      "img": "https://image.freepik.com/free-photo/beef-burger-stuffed-with-mixed-ingreadients-black-board_114579-2601.jpg"
+    },
+    {
+  
+      "title":"burger",
+      "name": "Crunchy Chicken and Fish Burger",
+      "rating":"3.8",
+      "price":"7",
+      "desc": "If a burger for you is all about the meat and protein then youre at the right place. Experience the goodness of chicken, fish and a tangy hot and sour sauce.",
+      "img": "https://image.freepik.com/free-photo/big-cheeseburger-french-fries_140725-2256.jpg"
+    },
+    {
+    
+      "title":"burger",
+      "name": "Chicken Feta Cheese Burger With Potato Salad",
+      "rating":"4.9",
+      "price":"8",
+      "desc": "Chicken mince marinated with salt, pepper and feta cheese is only the beginning of this ultimate wonder. To accompany this weve got a guilt free potato salad with a yogurt dressing.",
+      "img": "https://image.freepik.com/free-photo/hamburger-with-beef-meat-burger-fresh-vegetables-dark-surface_2829-5883.jpg"
+    },
+    {
+ 
+      "title":"burger",
+      "name": " Stuffed Bean Burger",
+      "rating":"4.3",
+      "price":"5.60",
+      "desc": "Being a vegetarian is no reason to deny yourself the gluttonous pleasures of an overstuffed bun. Try this bean burger with a chipotle chilli and a dash of lime.",
+      "img": "https://image.freepik.com/free-photo/chicken-burger-wooden-board-side-view_141793-2338.jpg"
+    },
+    {
+  
+      "title":"pizza",
+      "name": "Margherita",
+      "rating":"4.3",
+      "price":"8.60",
+      "desc": "Tomato sauce, mozzarella, mushrooms, pepperoni, and Stracchino (soft cheese)",
+      "img": "https://image.freepik.com/free-photo/crispy-mixed-pizza-with-olives-sausage_140725-3095.jpg"
+    },
+    {
+
+      "title":"pizza",
+      "name": "Quattro Stagioni",
+      "rating":"4.3",
+      "price":"6.60",
+      "desc": "Tomato sauce, mozzarella, mushrooms, pepperoni, and Stracchino (soft cheese)",
+      "img": "https://image.freepik.com/free-photo/mix-pizza-chicken-tomato-bell-pepper-olives-mushroom-side-view_141793-3167.jpg"
+    },
+    {
+    
+      "title":"pizza",
+      "name": "Fattoria",
+      "rating":"4.3",
+      "price":"8.60",
+      "desc": "Tomato sauce, mozzarella, ham, mushrooms, artichokes, anchovies, and oregano.",
+      "img": "https://image.freepik.com/free-photo/pizza-with-salami-tomatoes-olives-cheese-dough-with-whole-wheat-flour-italian-food_2829-6855.jpg"
+    },
+    {
+     
+      "title":"pasta",
+      "name": "Ortolana",
+      "rating":"4.3",
+      "price":"4.60",
+      "desc": "Tomato sauce, mozzarella, ham, mushrooms, artichokes, anchovies, and oregano.",
+      "img": "https://image.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19744.jpg"
+    },
+    {
+  
+      "title":"coffee",
+      "name": "Espresso",
+      "rating":"11",
+      "price":"11",
+      "desc": "The espresso, also known as a short black, is approximately 1 oz. of highly concentrated coffee. Although simple in appearance, it can be difficult to master",
+      "img": "https://image.freepik.com/free-vector/white-cup-hot-coffee-with-cinnamon-saucer-beans-wooden-table-realistic_1284-56783.jpg"
+    },
+    {
+  
+      "title":"icecream",
+      "name": "Blue Heaven ",
+      "rating":"5",
+      "price":"13",
+      "desc": "Blue Heaven is a milkshake and topping flavour sold primarily in Australia. It is blue in colour, and its taste is a mix of vanilla and raspberry",
+      "img": "https://image.freepik.com/free-photo/delicious-ice-cream_144627-19516.jpg"
+    }
+
+  ]

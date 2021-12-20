@@ -1,0 +1,10 @@
+.menu-link{
+    color:black;
+    margin-left: 5px;
+}
+.menu-btn{
+    background-color: #FE5F41;
+    border:#FE5F41;
+    color:#fff;
+    border-radius: 15px;
+}
