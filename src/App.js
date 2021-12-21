@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Header from './pages/shared/Hedaer/Header';
 import Home from './pages/home/Home';
+import Footer from './pages/shared/Footer/Footer';
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
           </Route>
           
         </Routes>
+        <Footer></Footer>
 
 
       </BrowserRouter>

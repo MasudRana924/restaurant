@@ -1,0 +1,26 @@
+.footer{
+  height:520px;
+  background-color: black;;
+}
+.footer-image{
+    height:450px;
+}
+
+.insta-icon{
+    font-size: 30px;
+    color:#FE5F41;
+}
+.fb-icon{
+    font-size: 30px;  
+    color:#FE5F41;
+  
+}
+.youtube-icon{
+    font-size: 30px;
+    color:#FE5F41;
+   
+}
+.google-icon{
+    color:#FE5F41;
+    font-size: 30px;
+}

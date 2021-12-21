@@ -5,6 +5,7 @@ import Foods from '../Foods/Foods';
 import All from '../Menu/All/All';
 import Menu from '../Menu/Menu';
 import Reservation from '../Reservation/Reservation';
+import Reviews from '../review/Review';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             </Routes>
             <Foods></Foods>
             <Reservation></Reservation>
+            <Reviews></Reviews>
            
         </div>
     );
