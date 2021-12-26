@@ -41,7 +41,7 @@
      margin-top: 5px;
  }
  .proceed-btn{
-    background-color: black;
+    background-color: #FE5F41;
     border:gold;
     outline-style: none;
     color:#fff;
@@ -62,6 +62,6 @@
     
 }
  .off-header{
-     background-color:mediumspringgreen;
+    background-color: #FE5F41;
      
  }

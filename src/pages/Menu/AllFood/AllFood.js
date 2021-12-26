@@ -21,7 +21,7 @@ const AllFood = (props) => {
 
                     </Rating>
                 </div>
-                <button className="menu-btn">Order Now</button>
+                <button className="menu-btn" >Order Now</button>
              
 
             </div>

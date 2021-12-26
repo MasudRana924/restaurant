@@ -9,22 +9,25 @@ import {
 import Header from './pages/shared/Hedaer/Header';
 import Home from './pages/home/Home';
 import Footer from './pages/shared/Footer/Footer';
+import Signup from './pages/signup/Signup';
+import Login from './pages/login/Login';
+import AuthProvider from './context/AuthProvider'
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header></Header>
-        <Routes>
-          <Route path="/" element={<Home />}>
-          </Route>
-          <Route path="/home" element={<Home />}>
-          </Route>
-          
-        </Routes>
-        <Footer></Footer>
+      <AuthProvider>
+        <BrowserRouter>
+          <Header></Header>
+          <Routes>
+            <Route path="/" element={<Home />}> </Route>
+            <Route path="/home" element={<Home />}> </Route>
+            <Route path="/signup" element={<Signup />}></Route>
+            <Route path="/login" element={<Login />}></Route>
 
-
-      </BrowserRouter>
+          </Routes>
+          <Footer></Footer>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }

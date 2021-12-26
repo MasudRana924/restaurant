@@ -8,7 +8,7 @@ import { faFacebook, faGoogle, faInstagram, faYoutube} from '@fortawesome/free-b
 const Footer = () => {
 
     return (
-        <Container fluid className="footer pb-3">
+        <Container fluid className="footer mt-5 pb-3">
             <div>
                 <img src={img} className="footer-image" alt="" />
             </div>

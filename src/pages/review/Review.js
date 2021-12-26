@@ -58,7 +58,7 @@ const Reviews = () => {
         <Container fluid className="mt-5 pt-5 ">
 
             <div className="w-75 mx-auto">
-                <h3>What are Our Customer Say's</h3>
+                <h3 className="fw-bold pb-3">What are Our Customer Say's</h3>
                 {
                     reviews.length === 0 ? < div className="spinner"> <Spinner animation="border" className="spinner" />
                     </div> :

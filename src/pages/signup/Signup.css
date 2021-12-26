@@ -1,0 +1,17 @@
+.signup-card{
+    border:1px solid gainsboro;
+    padding-top: 30px;
+    background-color: #e55353;
+}
+.google-btn{
+    background-color: black;
+    border:black;
+    color:white;
+    width:50%;
+}
+.facebook-btn{
+    background-color: black;
+    border:black;
+    width:50%;
+    color:white;
+}

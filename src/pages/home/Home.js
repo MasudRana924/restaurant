@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes,Route } from 'react-router-dom';
 import Banner from '../banner/Banner';
+import Burgers from '../burger/Burgers';
 import Foods from '../Foods/Foods';
 import All from '../Menu/All/All';
 import Menu from '../Menu/Menu';
@@ -11,12 +12,13 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Routes>
+            {/* <Routes>
                <Route path="/" element={<Menu ></Menu>}>
-                   <Route exact path="/" element={<All/>}></Route>
-     
+                   <Route path="/" element={<All/>}></Route>
+                   <Route  path="burger" element={<Burgers/>}></Route>
                </Route>
-            </Routes>
+            </Routes> */}
+            <All></All>
             <Foods></Foods>
             <Reservation></Reservation>
             <Reviews></Reviews>

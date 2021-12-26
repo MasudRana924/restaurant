@@ -12,7 +12,9 @@ const Reservation = () => {
     const [Adate, setADate] = React.useState(null);
     const { register, handleSubmit, formState: { errors } } = useForm();
     return (
+        <div id="reserve">
         <Container fluid className="mt-5 pt-5">
+        <h3 className="text-center fw-bold pb-3">Reservation</h3>
             <Row xs={1} md={2} className="w-75 mx-auto">
                 <Col md={8}>
                     <img src={client} className="client-img" alt="" />
@@ -49,6 +51,7 @@ const Reservation = () => {
                 </Col>
             </Row>
         </Container>
+        </div>
     );
 };
 

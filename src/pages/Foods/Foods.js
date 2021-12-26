@@ -13,7 +13,8 @@ const Foods = () => {
     const drinks = <FontAwesomeIcon icon={faIceCream} className="food-icon" />
    
     return (
-        <Container fluid className="mt-5 pt-5">
+        <Container fluid className="mt-5 pt-5 pb-5">
+            <h3 className="text-center fw-bold">Our Services</h3>
             <Row xs={1} md={3}>
                 <Col className="mt-1">
                     <div className="food-container" >
