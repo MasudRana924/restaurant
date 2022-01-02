@@ -1,10 +1,8 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
 import useAuth from './../../hooks/useAuth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import './Carts.css'
-import { removeFromDb } from '../../hooks/fakeDB';
 
 const Carts = (props) => {
     const { _id, name, img, quantity, price } = props.product
@@ -24,10 +22,7 @@ const Carts = (props) => {
 
     return (
         <>
-            <Row xs={1} md={3}>
-                <Col md={3}></Col>
-                <Col md={6} >
-                    <div className="cart-card d-flex mt-3">
+                    <div className="cart-card d-flex mt-3 me-3">
                         <div className="w-25 mx-auto ">
                             <img src={img} className="cart-image" alt="" />
 
@@ -44,17 +39,7 @@ const Carts = (props) => {
                             </div>
                         </div>
                     </div>
-
-                </Col>
-                <Col md={3}>
-
-                </Col>
-            </Row>
-
-
         </>
-
     );
 };
-
 export default Carts;

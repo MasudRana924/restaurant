@@ -23,7 +23,7 @@ const Reservation = () => {
                     <h3>Book a Table</h3>
                     <p className="text-start ">Making a reservation is very easy and takes some few minutes.</p>
                     <div className="table">
-                    <form className="shipping-form w-100" >
+                    <form className="shipping-formm w-100" >
                         <input defaultValue="" {...register("name")} className="form-input" placeholder="Your name" />
                         {/* include validation with required or other standard HTML validation rules */}
                         <input defaultValue="" {...register("phone", { required: true })} placeholder="Your phone number" className="form-input" />

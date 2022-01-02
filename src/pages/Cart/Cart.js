@@ -1,8 +1,9 @@
 import React from 'react';
 import useAuth from '../../hooks/useAuth';
 import Carts from './Carts';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 import { removeFromDb } from '../../hooks/fakeDB';
+import { Link } from 'react-router-dom';
 const Cart = () => {
     const { cart, setCart } = useAuth()
     const handleRemove = _id => {
@@ -24,39 +25,35 @@ const Cart = () => {
     const grandTotal = total + shipping + tax;
     return (
         <Container fluid className="mt-3">
-            {
-                cart.map(product => <Carts
-                    product={product}
-                    key={product._id}
-                    handleRemove={handleRemove}
-                ></Carts>)
-            }
-
-            <Row xs={1} md={3}>
-                <Col md={3}></Col>
-                <Col md={6} >
-                    <div className=" mt-1">
-                        <div className="cart-total">
-                            <h5>Order Summary</h5>
-                            <div className="price-rating ms-3 me-5">
-                                <p >Total items ordered : {totalQuantity}</p>
-                                <p>Total : ${total.toFixed(2)}</p>
-                            </div>
-                            <div className="price-rating ms-3 me-5">
-                                <p >Tax : ${tax.toFixed(2)}</p>
-                                <p>Shipping : ${shipping.toFixed(2)}</p>
-                                <p>GrandTotal : ${grandTotal.toFixed(2)}</p>
-                            </div>
-                            <button className=" checkOut-btn">CheckOut</button>
-
+            <div className="w-100 mx-auto d-flex">
+                <div className="w-50 mx-auto">
+                    {
+                        cart.map(product => <Carts
+                            product={product}
+                            key={product._id}
+                            handleRemove={handleRemove}
+                        ></Carts>)
+                    }
+                </div>
+                <div className="w-25 mx-auto mt-1">
+                    <div className="cart-total">
+                        <h5>Order Summary</h5>
+                        <div >
+                            <p className="text-start ms-1">Total items ordered : {totalQuantity}</p>
+                            <p className="text-start ms-1">Total : ${total.toFixed(2)}</p>
                         </div>
+                        <div >
+                            <p  className="text-start ms-1">Tax : ${tax.toFixed(2)}</p>
+                            <p  className="text-start ms-1">Shipping : ${shipping.toFixed(2)}</p>
+                            <p  className="text-start ms-1">GrandTotal : ${grandTotal.toFixed(2)}</p>
+                        </div>
+                        <Link to="/checkout">
+                        <button className=" checkOut-btn">CheckOut</button>
+                        </Link>
+                       
                     </div>
-
-                </Col>
-                <Col md={3}>
-
-                </Col>
-            </Row>
+                </div>
+            </div>
         </Container>
     );
 };

@@ -12,6 +12,7 @@ import Footer from './pages/shared/Footer/Footer';
 import Signup from './pages/signup/Signup';
 import Login from './pages/login/Login';
 import Cart from './pages/Cart/Cart'
+import CheckOut from './pages/checkout/CheckOut'
 import AuthProvider from './context/AuthProvider'
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/signup" element={<Signup />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/cart" element={<Cart></Cart>}></Route>
+            <Route path="/checkout" element={<CheckOut />}></Route>
 
           </Routes>
           <Footer></Footer>
