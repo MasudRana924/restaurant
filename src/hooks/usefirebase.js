@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import initializeAuthentication from './../firebase/firebase.init';
 import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import { addToDb, getStoredCart } from './fakeDB';
+import useCart from './useCart';
 initializeAuthentication()
 
 const useFirebase = () => {
@@ -9,13 +11,33 @@ const useFirebase = () => {
     const [foods,setFoods]=useState([])
     const [displayFoods,setDisplayFoods]=useState([])
     useEffect(()=>{
-        fetch('./foods.json')
+        fetch('http://localhost:5000/foods')
         .then(res=>res.json())
         .then(data=>{
             setFoods(data)
             setDisplayFoods(data)
         })
     },[])
+    const [cart, setCart] = useState([]);
+    useEffect(() => {
+        if (foods.length) {
+            const savedCart = getStoredCart();
+            const storedCart = [];
+            for (const _id in savedCart) {
+                const addedProduct = foods.find(product => product._id === _id);
+                if (addedProduct) {
+                    // set quantity
+                    const quantity = savedCart[_id];
+                    addedProduct.quantity = quantity;
+                    storedCart.push(addedProduct);
+                }
+            }
+            setCart(storedCart);
+        }
+    }, [foods]);
+
+   
+
     // for name
     const [name, setName] = useState('')
     // for email
@@ -88,7 +110,7 @@ const useFirebase = () => {
     }
     return {
         user, registerUser, logInUser, logOut, isLoading,
-        setError, error, handleEmail, handlePass, handleName, setUserName, email, pass, setUser, name, setLoading,foods,displayFoods,setDisplayFoods
+        setError, error, handleEmail, handlePass, handleName, setUserName, email, pass, setUser, name, setLoading,foods,displayFoods,setDisplayFoods,cart,setCart
     }
 }
 export default useFirebase 

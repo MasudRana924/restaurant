@@ -51,7 +51,7 @@ const Signup = () => {
                                 setError('')
                                 const newUser = { email, displayName: name }
                                 setUser(newUser)
-                                // saveUser(email, name)
+                                saveUser(email, name)
                                 setUserName()
                             })
                             .catch(error => {

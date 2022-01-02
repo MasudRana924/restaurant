@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
+import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faCartPlus, faHeart, faUtensils } from '@fortawesome/free-solid-svg-icons'
@@ -7,23 +7,28 @@ import './Header.css'
 import { HashLink } from 'react-router-hash-link';
 import useAuth from './../../../hooks/useAuth';
 
+
 const Header = () => {
-    const {foods,setDisplayFoods}=useAuth()
+    const { foods, setDisplayFoods, cart } = useAuth()
     const search = <FontAwesomeIcon icon={faSearch} />
-    const cart = <FontAwesomeIcon icon={faCartPlus} className="cart-icon" />
+    const cartt = <FontAwesomeIcon icon={faCartPlus} className="cart-icon" />
     const heart = <FontAwesomeIcon icon={faHeart} className="heart-icon" />
     const logo = <FontAwesomeIcon icon={faUtensils} className="heart-icon" />
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
     const handleSearch = event => {
         const searchText = event.target.value;
-
-        const matchedProducts = foods.filter(food =>food.title.toLowerCase().includes(searchText.toLowerCase()));
-
+        const matchedProducts = foods.filter(food => food.title.toLowerCase().includes(searchText.toLowerCase()));
         setDisplayFoods(matchedProducts);
     }
+    let totalQuantity = 0;
+    let total = 0;
+    for (const product of cart) {
+        if (!product.quantity) {
+            product.quantity = 1;
+        }
+        total = total + product.price * product.quantity;
+        totalQuantity = totalQuantity + product.quantity;
+    }
+
 
     return (
         <>
@@ -49,19 +54,13 @@ const Header = () => {
                             <Link to="/" className="icon-panel "> <button className="iconbtn">
                                 {heart}</button>
                             </Link>
-                            <button className="iconbtn " onClick={handleShow}>
-                                {cart} <span className="cart-item"> 0</span></button>
-                            <Offcanvas show={show} onHide={handleClose} placement="right" className="off-canvas">
-                                <Offcanvas.Header closeButton className="off-header">
-                                    <Offcanvas.Title>My Cart ( items )</Offcanvas.Title>
-                                </Offcanvas.Header>
-                                <Offcanvas.Body>
+                            <Link to="/cart">
+                                <button className="iconbtn ">
+                                    {cartt} <span className="cart-item">{totalQuantity} </span>
+                                </button>
+                            </Link>
 
-                                </Offcanvas.Body>
-                                <Link to="/proceed">
-                                    <button className="proceed-btn w-75 mx-auto ms-5 mb-3 pb-1">Proceed</button>
-                                </Link>
-                            </Offcanvas>
+
                         </Nav>
                         <Nav>
                             <Link to="/login">

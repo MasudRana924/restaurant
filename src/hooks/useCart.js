@@ -9,11 +9,11 @@ const useCart = foods => {
         if (foods.length) {
             const savedCart = getStoredCart();
             const storedCart = [];
-            for (const id in savedCart) {
-                const addedProduct = foods.find(product => product.id === id);
+            for (const _id in savedCart) {
+                const addedProduct = foods.find(product => product._id === _id);
                 if (addedProduct) {
                     // set quantity
-                    const quantity = savedCart[id];
+                    const quantity = savedCart[_id];
                     addedProduct.quantity = quantity;
                     storedCart.push(addedProduct);
                 }
