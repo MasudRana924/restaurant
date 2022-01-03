@@ -54,14 +54,34 @@
  .heart-icon{
      color:#FE5F41;
  }
+ .arrow-icon{
+    color:#FE5F41;
+    font-size: 20px;
+    
+}
+ 
  .login-btn{
     background-color: #FE5F41;
     border:#FE5F41;
     color:#fff;
-    border-radius: 10px;
-    
+    border-radius: 10px;   
+}
+.button-info{
+    background-color: white;
+    border:none;
+}
+.button-logOut{
+    background-color: red;
+    border:2px solid red;
+    width:100%;
+    border-radius: 20px;
+    color:white;
 }
  .off-header{
     background-color: #FE5F41;
      
+ }
+ .name-text{
+     color:white;
+     font-size: 15px;
  }

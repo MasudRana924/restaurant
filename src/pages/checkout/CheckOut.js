@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCcPaypal, faCcVisa, faCcMastercard } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
+import All from '../Menu/All/All'
 
 const CheckOut = () => {
     const { register, handleSubmit, formState: { errors } ,reset} = useForm();
@@ -30,8 +31,8 @@ const CheckOut = () => {
             .then(result => {
                 if (result) {
                     swal({
-                        title: "Success",
-                        text: "Request placed !",
+                        title: "Orders Done",
+                        text: "You can pay now or later",
                         icon: "success",
                         button: "Ok",
                     }); 
@@ -97,7 +98,10 @@ const CheckOut = () => {
                 </Col>
 
             </Row>
-
+             
+             <div>
+                 <All></All>
+             </div>
         </Container>
     );
 };

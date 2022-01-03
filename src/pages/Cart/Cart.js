@@ -4,6 +4,7 @@ import Carts from './Carts';
 import { Container} from 'react-bootstrap';
 import { removeFromDb } from '../../hooks/fakeDB';
 import { Link } from 'react-router-dom';
+import All from './../Menu/All/All';
 const Cart = () => {
     const { cart, setCart } = useAuth()
     const handleRemove = _id => {
@@ -20,7 +21,7 @@ const Cart = () => {
         total = total + product.price * product.quantity;
         totalQuantity = totalQuantity + product.quantity;
     }
-    const shipping = total > 0 ? 15 : 0;
+    const shipping = total > 0 ? 75 : 0;
     const tax = (total + shipping) * 0.10;
     const grandTotal = total + shipping + tax;
     return (
@@ -48,11 +49,15 @@ const Cart = () => {
                             <p  className="text-start ms-1">GrandTotal : ${grandTotal.toFixed(2)}</p>
                         </div>
                         <Link to="/checkout">
-                        <button className=" checkOut-btn">CheckOut</button>
+                        <button className="checkOut-btn">CheckOut</button>
                         </Link>
                        
                     </div>
                 </div>
+            </div>
+            <div>
+                <h5 className="text-start ms-3 mt-3">OTHER FOODS YOU MAY LIKE</h5>
+                <All></All>
             </div>
         </Container>
     );
