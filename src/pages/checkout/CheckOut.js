@@ -7,17 +7,39 @@ import { clearTheCart } from '../../hooks/fakeDB';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCcPaypal, faCcVisa, faCcMastercard } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 const CheckOut = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const { user, setCart } = useAuth()
+    const { register, handleSubmit, formState: { errors } ,reset} = useForm();
+    const { user,cart } = useAuth()
     const pay = <FontAwesomeIcon icon={faCcPaypal} className="pay-icon" />
     const visa = <FontAwesomeIcon icon={faCcVisa} className="visa-icon" />
     const master = <FontAwesomeIcon icon={faCcMastercard} className="master-icon" />
 
     const onSubmit = data => {
-        setCart([])
-        clearTheCart()
+    
+        data.info= cart
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result) {
+                    swal({
+                        title: "Success",
+                        text: "Request placed !",
+                        icon: "success",
+                        button: "Ok",
+                    }); 
+                    clearTheCart()
+                    reset()
+                   
+                }
+            })
 
     };
     return (
